@@ -1,3 +1,4 @@
+from decouple import config
 from web3 import Web3
 import json
 
@@ -6,7 +7,7 @@ web3 = Web3(Web3.HTTPProvider(bsc))
 
 print(web3.isConnected())
 
-main_address="0x41838D1214e73755854441fEe8CD5566e52E122f"
+main_address = config('BY_HOLD')
 contract_address = "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47"
 ADA = "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47"
 
